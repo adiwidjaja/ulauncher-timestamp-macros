@@ -26,14 +26,14 @@ class KeywordQueryEventListener(EventListener):
         # print("my event", event.get_keyword())
         # print('{0:%Y-%m-%d}'.format(datetime.datetime.now()))
         items.append(ExtensionResultItem(icon='images/icon.png',
-                                         name='YYYY-MM-DD',
-                                         description='Enter to copy to the clipboard',
-                                         on_enter=CopyToClipboardAction('{0:%Y-%m-%d}'.format(datetime.datetime.now()))))
-
-        items.append(ExtensionResultItem(icon='images/icon.png',
                                  name='DD.MM.YYYY',
                                  description='Enter to copy to the clipboard',
                                  on_enter=CopyToClipboardAction('{0:%d.%m.%Y}'.format(datetime.datetime.now()))))
+
+        items.append(ExtensionResultItem(icon='images/icon.png',
+                                         name='YYYY-MM-DD',
+                                         description='Enter to copy to the clipboard',
+                                         on_enter=CopyToClipboardAction('{0:%Y-%m-%d}'.format(datetime.datetime.now()))))
 
         items.append(ExtensionResultItem(icon='images/icon.png',
                                          name='HH:mm',
